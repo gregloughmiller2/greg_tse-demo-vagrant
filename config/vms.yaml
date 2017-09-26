@@ -32,6 +32,26 @@ vms:
     box: "win2012r2_1.0.4"
     roles: [ "windows_agent" ]
 
-  - name: "server2016a.pdx.puppet.vm"
-    box: "win2016_1.0.4"
-    roles: [ "windows_agent" ]
+#  - name: "server2016a.pdx.puppet.vm"
+#    box: "win2016_1.0.4"
+#    roles: [ "windows_agent" ]
+#
+#======================================#
+# Puppet greenfield install machine    #
+#======================================#
+  - name: "greg6a.pdx.puppet.vm"
+    box: "centos/7"
+    roles: [ "posix_agent" ]
+#
+#======================================#
+# General-purpose machines, Sydney     #
+#======================================#
+  - name: "centos6b.syd.puppet.vm"
+    box: "puppetlabs/centos-6.6-64-nocm"
+    roles: [ "posix_agent" ]
+    autostart: false
+
+  - name: "centos7b.syd.puppet.vm"
+    box: "puppetlabs/centos-7.2-64-nocm"
+    roles: [ "posix_agent" ]
+    autostart: false
